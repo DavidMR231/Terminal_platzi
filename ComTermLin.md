@@ -129,7 +129,15 @@ history
 ```
 
 * **clear:** Limpia la pantalla.
-
+  
 ```
 clear
 ```
+
+* **find:** el cual buscará en la ruta que le indiques el tipo de archivos que necesitas
+
+```
+find [rutaDesdeDondeEmpezarBuscar] [opciones]
+```
+
+
