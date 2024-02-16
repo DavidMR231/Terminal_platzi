@@ -134,10 +134,49 @@ history
 clear
 ```
 
-* **find:** el cual buscará en la ruta que le indiques el tipo de archivos que necesitas
+## Cómo usar el comando `find`
+
+**Descripción:**
+
+El comando `find` es una herramienta poderosa para buscar archivos y directorios en sistemas Linux.
+
+**Sintaxis básica:**
 
 ```
 find [rutaDesdeDondeEmpezarBuscar] [opciones]
 ```
+
+**Opciones:**
+
+* **-type:** Especifica el tipo de archivo que se busca.
+    * `f` para archivos
+    * `d` para directorios
+    * `l` para enlaces simbólicos
+* **-name:** Especifica el nombre del archivo que se busca.
+* **-mtime:** Especifica la fecha de modificación del archivo.
+* **-ctime:** Especifica la fecha de creación del archivo.
+* **-perm:** Especifica los permisos del archivo.
+
+**Ejemplos:**
+
+* **Buscar archivos que comienzan con la letra "f" en el directorio actual:**
+
+```
+find ./ -type f -name "f*"
+```
+
+* **Buscar archivos de 4 kilobytes en el directorio actual:**
+
+```
+find ./ -size 4k
+```
+
+* **Buscar archivos con permisos 755 en el directorio actual:**
+
+```
+find ./ -perm 755
+```
+
+
 
 
