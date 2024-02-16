@@ -177,6 +177,78 @@ find ./ -size 4k
 find ./ -perm 755
 ```
 
+## Cómo usar el comando `grep`
+
+**Descripción:**
+
+El comando `grep` es una herramienta para buscar líneas que coincidan con un patrón de texto en uno o más archivos.
+
+**Sintaxis básica:**
+
+```
+grep [opciones] PATRON [ARCHIVO]
+```
+
+**Opciones:**
+
+* **-i:** Ignora las mayúsculas y minúsculas.
+* **-n:** Muestra el número de línea donde se encuentra la coincidencia.
+* **-c:** Muestra el número de coincidencias en cada archivo.
+* **-E:** Permite usar expresiones regulares.
+
+**Ejemplos:**
+
+* **Buscar todas las líneas que contienen la palabra "Hola" en el archivo "archivo.txt":**
+
+```
+grep Hola archivo.txt
+```
+
+* **Buscar todas las líneas que comienzan con la letra "A" en el archivo "archivo.txt", ignorando las mayúsculas y minúsculas:**
+
+```
+grep -i ^A archivo.txt
+```
+
+* **Mostrar el número de línea donde se encuentra la palabra "Hola" en el archivo "archivo.txt":**
+
+```
+grep -n Hola archivo.txt
+```
+
+* **Mostrar el número de coincidencias de la palabra "Hola" en el archivo "archivo.txt":**
+
+```
+grep -c Hola archivo.txt
+```
+
+* **Buscar todas las líneas que coincidan con la expresión regular "[0-9]{3}" (tres números) en el archivo "archivo.txt":**
+
+```
+grep -E "[0-9]{3}" archivo.txt
+```
+
+**Consejos:**
+
+* Puedes usar el comando `man grep` para obtener más información sobre las opciones disponibles.
+* Puedes usar el comando `grep -h` para mostrar el nombre del archivo antes de cada línea que coincida.
+* Puedes usar el comando `grep -r` para buscar en un directorio de forma recursiva.
+
+**Ejemplos adicionales:**
+
+* **Buscar todas las líneas que contienen la palabra "Hola" en todos los archivos del directorio actual:**
+
+```
+grep -r Hola .
+```
+
+* **Mostrar el nombre del archivo y el número de línea donde se encuentra la palabra "Hola" en todos los archivos del directorio actual:**
+
+```
+grep -hn Hola .
+```
+
+
 
 
 
