@@ -95,7 +95,20 @@ kill 595
 
 Este comando solo funciona para los procesos que se ejecutan en la terminal.
 
-**Tabla de comandos:**
+## Tabla de comandos
 
-| Comando | Función | | --- | --- | | ps | Muestra una tabla con los procesos que se están ejecutando | | top | Muestra una interfaz con los procesos que se están ejecutando, los recursos que consumen e información adicional | | kill | Mata el proceso que le indiques |
+| Comando | Función | Opciones |
+|---|---|---|
+| **cd** | Cambiar de directorio | `directorio/subdirectorio` |
+| **ls** | Listar el contenido de un directorio | `-a`, `-l`, `-h` |
+| **pwd** | Mostrar la ruta del directorio actual | - |
+| **mkdir** | Crear un directorio | `nuevo_directorio` |
+| **rmdir** | Eliminar un directorio vacío | `directorio_vacio` |
+| **touch** | Crear un archivo vacío | `archivo.txt` |
+| **rm** | Eliminar un archivo | `-f`, `-r`, `-i` |
+| **cp** | Copiar archivos | `-r`, `-f`, `-p` |
+| **mv** | Mover archivos | `-r`, `-f`, `-p` |
+| **ps** | Muestra una tabla con los procesos que se están ejecutando | `-aux`, `-u USUARIO` |
+| **top** | Muestra una interfaz con los procesos que se están ejecutando, los recursos que consumen e información adicional | `-u USUARIO`, `-h` |
+| **kill** | Mata el proceso que le indiques | PID |
 
