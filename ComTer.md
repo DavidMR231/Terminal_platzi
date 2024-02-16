@@ -1,101 +1,93 @@
-## Comandos de la terminal para comprimir archivos tar y zip
+## Cómo comprimir y descomprimir archivos en la terminal
 
-### Comprimir archivos con tar:
+**Introducción:**
 
-**Comprimir un archivo:**
+En este archivo README encontrarás información sobre cómo comprimir y descomprimir archivos en la terminal usando los formatos `.tar`, `.tar.gz` y `.zip`.
+
+**Comprimiendo archivos con formato .tar:**
+
+El formato `.tar` es un tipo de compresión popular en sistemas UNIX. Se utiliza para almacenar información de forma lineal, ideal para backups.
+
+**Sintaxis:**
 
 ```
-tar -cf archivo.tar nombre_del_archivo
+tar [opciones] [nombreDelArchivoComprimido] [archivoAComprimir]
 ```
 
-**Ejemplo:**
+**Opciones:**
+
+* **-c:** Comprimir.
+* **-f:** Especificar el archivo a comprimir o descomprimir.
+* **-v:** Mostrar información detallada del proceso.
+* **-z:** Comprimir con gzip (formato `.tar.gz`).
+
+**Ejemplos:**
+
+* **Comprimir un archivo:**
 
 ```
 tar -cf archivo.tar mi_archivo.txt
 ```
 
-**Comprimir un directorio:**
+* **Comprimir un directorio:**
 
 ```
 tar -cf archivo.tar directorio/
 ```
 
-**Ejemplo:**
+* **Ver el proceso de compresión:**
 
 ```
-tar -cf archivo.tar mi_directorio/
+tar -cvf archivo.tar Documents/toCompress/
 ```
 
-**Comprimir y Gzip:**
+* **Comprimir con formato .tar.gz:**
 
 ```
-tar -czf archivo.tar.gz nombre_del_archivo/directorio/
+tar -czvf archivo.tar.gz Documents/toCompress/
 ```
 
-**Ejemplo:**
+**Descomprimiendo archivos .tar:**
+
+* **Descomprimir un archivo:**
 
 ```
-tar -czf archivo.tar.gz mi_archivo.txt
+tar -xf archivo.tar
 ```
 
-**Comprimir y Bzip2:**
+* **Descomprimir un archivo .tar.gz:**
 
 ```
-tar -cjf archivo.tar.bz2 nombre_del_archivo/directorio/
+tar -xzvf archivo.tar.gz
 ```
 
-**Ejemplo:**
+**Comprimiendo archivos con formato .zip:**
+
+El formato `.zip` es un formato de compresión universal compatible con la mayoría de sistemas operativos.
+
+**Sintaxis:**
+
+* **Comprimir:**
 
 ```
-tar -cjf archivo.tar.bz2 mi_directorio/
+zip -r archivo.zip carpeta/
 ```
 
-### Comprimir archivos con zip:
-
-**Comprimir un archivo:**
+* **Descomprimir:**
 
 ```
-zip archivo.zip nombre_del_archivo
+unzip archivo.zip
 ```
 
-**Ejemplo:**
+**Opciones:**
 
-```
-zip archivo.zip mi_archivo.txt
-```
+* **-r:** Comprimir una carpeta de forma recursiva.
 
-**Comprimir un directorio:**
+**Tabla de comandos:**
 
-```
-zip -r archivo.zip directorio/
-```
+| Comando | Función | Opciones |
+|---|---|---|
+| **tar** | Comprimir/descomprimir .tar | -c, -x, -f, -v, -z |
+| **zip** | Comprimir/descomprimir .zip | -r |
 
-**Ejemplo:**
 
-```
-zip -r archivo.zip mi_directorio/
-```
-
-**Comprimir con contraseña:**
-
-```
-zip -e archivo.zip nombre_del_archivo/directorio/ -P contraseña
-```
-
-**Ejemplo:**
-
-```
-zip -e archivo.zip mi_archivo.txt -P micontraseña
-```
-
-**Opciones adicionales:**
-
-* `-v`: Muestra información detallada del proceso de compresión.
-* `-t`: Muestra el contenido del archivo comprimido.
-* `-x`: Descomprime un archivo comprimido.
-
-**Ejemplo:**
-
-```
-tar -xvzf archivo.tar.gz
-```
